@@ -1,0 +1,110 @@
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca";
+  color: var(--very-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+}
+
+.card {
+  border-radius: 100px !important;
+}
+
+.div__1 {
+  background-color: var(--bright-orange);
+  padding: 3rem;
+  min-width: 20rem;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+
+.div__2 {
+  background-color: var(--dark-cyan);
+  padding: 3rem;
+  min-width: 20rem;
+}
+
+.div__3 {
+  background-color: var(--very-dark-cyan);
+  padding: 3rem;
+  min-width: 20rem;
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 100px;
+  background-color: var(--very-light-gray);
+  width: 10rem;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.1;
+  box-shadow: inset 0 0 0 3px #fff;
+  background-color: transparent;
+  color: white !important;
+  font-weight: bold;
+}
+
+.flex--column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.icon {
+  width: 3rem;
+}
+
+.div__1 > .btn {
+  color: var(--bright-orange);
+}
+
+.div__2 > .btn {
+  color: var(--dark-cyan);
+}
+
+.div__3 > .btn {
+  color: var(--very-dark-cyan);
+}
+
+@media (max-width: 35em) {
+  .grid__container {
+    grid-template-columns: 1fr;
+  }
+  .div__1,
+  .div__2,
+  .div__3 {
+    width: 18rem;
+  }
+}
